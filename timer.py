@@ -79,5 +79,7 @@ while 1:
             timer_started = True
         else:
             
-            display.scroll(str(curtime), wait=True)
+            cur_min = round(curtime,2)//60
+            cur_sec = round(curtime,2)-(cur_min*60)
+            display.scroll("%im %is"%(cur_min, cur_sec), delay=90, wait=True)
             show_img= True
